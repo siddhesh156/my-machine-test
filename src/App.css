@@ -6,6 +6,22 @@
   display: flex;
 }
 
+.mt-20{
+  margin-top: 20px;
+}
+
+.b{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+}
+
+.j-s{
+  justify-content: space-between;
+}
+
+.w{
+  width: 100%;
+}
 .a-c{
   align-items: center;
 }
