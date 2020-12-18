@@ -6,8 +6,16 @@
   display: flex;
 }
 
+.mt-10{
+  margin-top: 10px;
+}
+
 .mt-20{
   margin-top: 20px;
+}
+
+.ml-20{
+  margin-left: 20px;
 }
 
 .b{
@@ -22,6 +30,11 @@
 .w{
   width: 100%;
 }
+
+.h{
+height: 100%;
+}
+
 .a-c{
   align-items: center;
 }
