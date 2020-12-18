@@ -1,0 +1,21 @@
+.home{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+.oborder{
+    border: 1px orange solid;
+    width: 98%;
+}
+
+.dborder{
+    border: 1px gray solid;
+    width: 98%;
+}
+
+.subHeader{
+    justify-content: space-between;
+    height: "100%";
+}
