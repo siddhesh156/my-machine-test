@@ -1,0 +1,29 @@
+.home{
+    display: flex;
+    width: 96%;
+    flex-direction: column;
+    
+}
+
+.Header{
+height: 80px;
+}
+
+.oborder{
+    border: 1px orange solid;
+    width: 100%;
+}
+
+.dborder{
+    border: 1px gray solid;
+    width: 100%;
+}
+
+.uborder{
+    border: 1px lightgray solid;
+    height: 100%;
+}
+.subHeader{
+    justify-content: space-between;
+    height: 60px;
+}

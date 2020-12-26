@@ -1,0 +1,12 @@
+.mcard{
+    width: 18rem;
+    background:orange;
+    border:gray 1px solid; 
+}
+
+.cbody{
+    background:white;
+    margin-left:8px;
+    padding:0.4em;
+    
+}

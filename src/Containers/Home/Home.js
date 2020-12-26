@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import "./Home.css"
+import "./Home.css";
+import CompanyAddress from "../../Components/CompanyAddress";
 
-const Home = () =>{
-    const array = [{name:"Company Name",descp:"ABB Ltd"},
+const Home = (props) =>{
+    const companyList1 = [{name:"Company Name",descp:"ABB Ltd"},
     {name:"Address",descp:"Affolternstrasse 44, 8050 Zürich, Switzerland"}, 
     {name:"Phone",descp:"+41 433177111"},
     {name:"Website",descp:"Social.abb", link:true,url:"Social.abb"},
@@ -12,7 +13,7 @@ const Home = () =>{
     {name:"Parent Company",descp:"ABB Ltd"}
 ]
 
-const array2 = [{name:"Power Industry","descp":"Electrical Equipment, Appliance and Component Manufacturing"},
+const companyList2 = [{name:"Power Industry","descp":"Electrical Equipment, Appliance and Component Manufacturing"},
     {name:"Revenue",descp:"$1B+"}, 
     {name:"Employ Size",descp:"10,001+"},
     {name:"SBC",descp:"36 - Electronic, Electrical Equipment & components Except Computer Equipment"},
@@ -20,6 +21,12 @@ const array2 = [{name:"Power Industry","descp":"Electrical Equipment, Appliance 
     {name:"All Industry",descp:"Manufacture Electrical Equipment, Appliance and Component Manufacturing"},
     {name:"All SBC",descp:"36 - Electrical Equipment, Appliance and Component Manufacturing"}
 ]
+
+ const onEmpList=()=>{
+     console.log(props.history)
+     props.history.push("/list")
+ }
+
     return(
         <div className="d-f j-c">
         <div className="home">
@@ -37,7 +44,7 @@ const array2 = [{name:"Power Industry","descp":"Electrical Equipment, Appliance 
             <div className="d-f a-c j-s" style={{width:"25%"}}>
             <Button variant="outline-secondary">Update</Button>
             <Button variant="outline-secondary">Feedback</Button>
-            <Button variant="outline-secondary">Employee List</Button>
+            <Button variant="outline-secondary" onClick={()=>onEmpList()}>Employee List</Button>
             </div>
             </div>
            </div> 
@@ -73,28 +80,14 @@ const array2 = [{name:"Power Industry","descp":"Electrical Equipment, Appliance 
 
       
             <div className="d-f mt-20 w j-s">
-            <div className="w">{array.map((m)=>(
-                <div className="d-f f-c mt-10" style={{width: "98%"}}>
-                <div style={{fontFamily:"Arial", fontSize:"18px"}}>{m.name}</div>
-                {m.link ? <a href={m.url} style={{color:"blue"}}>{m.descp}</a> :
-                <div style={{fontFamily:"Arial", fontSize:"14px"}}>{m.descp}</div>
-                }
-                <div className="dborder"></div>
-                </div>
-            ))}</div>
-
-            <div className="w">{array2.map((m,i)=>(
-                <div className="d-f f-c mt-10" style={{width: "98%"}}>
-                <div style={{fontFamily:"Arial", fontSize:"18px"}}>{m.name}</div>
-                <div style={{fontFamily:"Arial", fontSize:"14px"}}>{m.descp}</div>
-                <div className="dborder"></div>
-                </div>
-            ))}
-             </div>
-
+            <div className="w">
+                <CompanyAddress companyList={companyList1} />
             </div>
-       
-       
+            <div className="w">
+            <CompanyAddress companyList={companyList2} />
+            </div>
+            </div>
+
         </div>
         </div>
     )
