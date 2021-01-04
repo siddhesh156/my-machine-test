@@ -23,6 +23,10 @@
   margin-left: 20px;
 }
 
+.mll-10{
+  margin-left: 10px;
+}
+
 .b{
   font-family: Arial, Helvetica, sans-serif;
   font-style: bold;
@@ -30,6 +34,10 @@
 
 .j-s{
   justify-content: space-between;
+}
+
+.mm-5{
+  margin-left: 5px;
 }
 
 .w{
